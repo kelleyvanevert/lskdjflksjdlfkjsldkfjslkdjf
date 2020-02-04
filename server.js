@@ -2,6 +2,7 @@
 // npm install express body-parser cors
 
 const express = require("express");
+const port = process.env.PORT || 3789;
 
 const app = express();
 
@@ -10,8 +11,8 @@ app.get("/", (request, response) => {
   response.send("hello world");
 })
 
-app.listen(3789, () => {
-  console.log("server started!");
+app.listen(port, () => {
+  console.log("server started, listening:", port);
 });
 
 // node server.js
